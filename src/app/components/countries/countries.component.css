@@ -1,0 +1,60 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+h1 {
+    width: 100%;
+}
+
+.view-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.view-buttons button {
+    margin: 0 5px;
+}
+
+.active {
+    background-color: #333;
+}
+
+.active mat-icon {
+    color: white;
+}
+
+/*CARD*/
+/* mat-card {
+    width: 300px;
+    margin: 1rem;
+    display: inline-block;
+}
+
+.header-text {
+    width: 100%;
+    text-align: center;
+}
+  
+mat-card-subtitle {
+    margin: 1rem 0;
+}
+
+mat-card-content {
+    padding: 2px 16px;
+} */

@@ -1,0 +1,19 @@
+<mat-table [dataSource]="countries">
+    <ng-container matColumnDef="countryId">
+        <mat-header-cell *matHeaderCellDef>ID</mat-header-cell>
+        <mat-cell *matCellDef="let country">{{ country.id }}</mat-cell>
+    </ng-container>
+  
+    <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef>NAME</mat-header-cell>
+        <mat-cell *matCellDef="let country">{{ country.name }}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="capital">
+        <mat-header-cell *matHeaderCellDef>CAPITAL</mat-header-cell>
+        <mat-cell *matCellDef="let country">{{ country.capital }}</mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="columns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: columns" [routerLink]="['/country', row.id]"></mat-row>
+</mat-table>

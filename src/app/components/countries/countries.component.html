@@ -1,8 +1,30 @@
 <div class="container">
     <h1>Countries</h1>
-    <ul class="list-group">
-        <a *ngFor="let country of countries" [routerLink]="['/country', country.id]" class="list-group-item list-group-item-action animate__animated animate__bounce animate__fadeIn">
-            {{ country.id }} - {{ country.name }}
-        </a>
-    </ul>
-</div>
+
+    <mat-spinner *ngIf="loading"></mat-spinner>
+
+    <div class="view-buttons">
+        <mat-button-toggle-group [value]="currentView">
+            <mat-button-toggle value="table" (click)="changeView('table')">
+                <mat-icon>view_list</mat-icon>
+            </mat-button-toggle>
+            <mat-button-toggle value="cards" (click)="changeView('cards')">
+                <mat-icon>view_module</mat-icon>
+            </mat-button-toggle>
+        </mat-button-toggle-group>
+    </div>
+
+    <div [@fadeInOut]> <!--Este DIV sirve para algo?-->
+        <div *ngIf="currentView === 'table'">
+            <ng-container>
+                <app-grid [countries]="countries"></app-grid>
+            </ng-container>
+        </div>
+    
+        <div *ngIf="currentView === 'cards'">
+            <ng-container *ngFor="let country of countries">
+                <app-card [item]="country"></app-card>
+            </ng-container>
+        </div>
+    </div>
+</div>  

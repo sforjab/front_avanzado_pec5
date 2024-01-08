@@ -1,1 +1,14 @@
-<p>country works!</p>
+<div class="container" *ngIf="country">
+    <h1>Detail page</h1>
+    <div class="details"> 
+        <p><strong>Identifier:</strong> {{ country.id }}</p>
+        <p><strong>Name:</strong> {{ country.name }}</p>
+        <p><strong>Capital and population:</strong> {{ country.capital }} - {{ country.population }}</p>
+    </div>
+  
+        <button mat-icon-button routerLink="/">
+            <mat-icon>keyboard_return</mat-icon>
+            <span>Return</span>
+          </button>          
+</div>
+  
