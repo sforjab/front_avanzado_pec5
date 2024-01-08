@@ -8,12 +8,8 @@ import { Country } from 'src/app/models/country.interface';
 })
 export class GridComponent {
   columns: string[] = ['countryId', 'name', 'capital'];
+  
   @Input() countries: Country[] = [];
-
-/*   ngOnInit(): void {
-    // Imprimir los identificadores para verificar su existencia y valor
-    console.log('Country IDs:', this.countries.map(country => country.id));
-  } */
 
   constructor() {}
 }

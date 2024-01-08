@@ -9,7 +9,6 @@ body {
 
 .container {
     display: flex;
-    position: relative;
     align-items: center;
     flex-direction: column;
     padding: 30px;
@@ -19,16 +18,26 @@ body {
 
 h1 {
     width: 100%;
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 2rem;
+}
+
+.back-button {
+    display: flex;
+    justify-content: flex-end;
+    width: 70%;
 }
   
-  .details {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .back-button {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-  }
-  
+.allDetails {
+    display: flex;
+    justify-content: space-between;
+}
+
+.allDetails > div {
+    flex: 1;
+}
+
+.allDetails img {
+    width: 50%;
+}

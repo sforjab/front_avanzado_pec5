@@ -1,14 +1,33 @@
 <div class="container" *ngIf="country">
-    <h1>Detail page</h1>
-    <div class="details"> 
-        <p><strong>Identifier:</strong> {{ country.id }}</p>
-        <p><strong>Name:</strong> {{ country.name }}</p>
-        <p><strong>Capital and population:</strong> {{ country.capital }} - {{ country.population }}</p>
+    <div class="back-button">
+        <button mat-raised-button color="warn" routerLink="/">
+            Back
+        </button>   
     </div>
-  
-        <button mat-icon-button routerLink="/">
-            <mat-icon>keyboard_return</mat-icon>
-            <span>Return</span>
-          </button>          
+
+    <div class="details"> 
+        <h1>{{ country.name }}</h1>
+        <!-- <p><strong>Identifier:</strong> {{ country.id }}</p> -->
+        <!-- <h2>Name: {{ country.name }}</h2> -->
+        <!-- <p><strong>Capital and population:</strong> {{ country.capital }} - {{ country.population }}</p> -->
+
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Show All Details
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="allDetails">
+                <div>
+                    <p><strong>Identifier:</strong> {{ country.id }}</p>
+                    <p><strong>Capital:</strong> {{ country.capital }}</p>
+                    <p><strong>Population:</strong> {{ country.population }}</p>
+                </div>
+                <div>
+                    <img src="{{ country.media.flag }}" alt="">
+                </div>
+            </div>
+        </mat-expansion-panel>
+    </div>       
 </div>
   
