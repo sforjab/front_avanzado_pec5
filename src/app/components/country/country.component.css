@@ -9,7 +9,7 @@ body {
 
 .container {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
     padding: 30px;
     width: 70%;
@@ -20,24 +20,26 @@ h1 {
     width: 100%;
     font-weight: bold;
     font-size: 2rem;
-    margin: 2rem;
+    margin: 2rem 0;
 }
 
 .back-button {
     display: flex;
     justify-content: flex-end;
-    width: 70%;
+    width: 100%;
 }
-  
-.allDetails {
+
+.info-container {
     display: flex;
-    justify-content: space-between;
+    gap: 20px;
+    justify-content: center;
+    font-size: 1.2rem;
+    margin: 2rem 0;
 }
 
-.allDetails > div {
-    flex: 1;
-}
-
-.allDetails img {
-    width: 50%;
+.img-container img {
+    display: block;
+    width: 40%;
+    margin: 0 auto;
+    border: 1px solid #000000;
 }

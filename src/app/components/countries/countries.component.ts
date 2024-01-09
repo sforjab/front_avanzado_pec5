@@ -12,10 +12,10 @@ import { CountriesService } from 'src/app/services/countries.service';
       state(
         'void',
         style({
-          opacity: 0.5,
+          opacity: 0.3,
         })
       ),
-      transition('void <=> *', animate(3000))
+      transition('void <=> *', animate(3500))
     ]),
   ],
 })

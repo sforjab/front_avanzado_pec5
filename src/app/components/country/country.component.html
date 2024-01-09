@@ -17,13 +17,16 @@
                     Show All Details
                 </mat-panel-title>
             </mat-expansion-panel-header>
-            <div class="allDetails">
-                <div>
+            <div>
+                <div class="info-container">
                     <p><strong>Identifier:</strong> {{ country.id }}</p>
+                    <p><strong>Abbreviation:</strong> {{ country.abbreviation }}</p>
                     <p><strong>Capital:</strong> {{ country.capital }}</p>
                     <p><strong>Population:</strong> {{ country.population }}</p>
+                    <p><strong>Currency:</strong> {{ country.currency }}</p>
+                    <p><strong>Phone prefix:</strong> {{ country.phone }}</p>
                 </div>
-                <div>
+                <div class="img-container">
                     <img src="{{ country.media.flag }}" alt="">
                 </div>
             </div>

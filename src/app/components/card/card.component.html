@@ -1,4 +1,5 @@
-<mat-card class="card">
+
+<mat-card class="card" [routerLink]="['/country', item.id]">
     <mat-card-header>
         <mat-card-title>{{ item.name }}</mat-card-title>
         <mat-card-subtitle>Capital: {{ item.capital }}</mat-card-subtitle>
