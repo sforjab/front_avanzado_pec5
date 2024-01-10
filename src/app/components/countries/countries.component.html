@@ -14,7 +14,7 @@
         </mat-button-toggle-group>
     </div>
 
-    <div [@fadeInOut]> <!--Este DIV sirve para algo?-->
+    <div [@fadeInOut]>
         <div *ngIf="currentView === 'table'">
             <ng-container>
                 <app-grid [countries]="countries"></app-grid>
