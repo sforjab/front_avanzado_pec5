@@ -18,6 +18,7 @@ export class CountryComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    // Leemos el parámetro id de la url
     const identifier = this.activatedRoute.snapshot.paramMap.get('id');
 
     if (identifier !== null) {
