@@ -34,7 +34,7 @@
         "https://api.sampleapis.com/countries/**"
       ],
       "cacheConfig": {
-        "maxSize": 260,
+        "maxSize": 10,
         "maxAge": "1h",
         "timeout": "2s",
         "strategy": "freshness"
